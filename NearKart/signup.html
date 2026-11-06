@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign Up | NearKart</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="pages.css">
+</head>
+<body data-page="signup">
+
+  <div id="site-header"></div>
+
+  <main class="auth-wrap">
+    <div class="auth-card card">
+      <div class="role-tabs">
+        <button type="button" data-role="customer">👤 Customer</button>
+        <button type="button" data-role="owner">🏪 Shop Owner</button>
+      </div>
+
+      <h1 id="authTitle">Customer Sign Up</h1>
+
+      <form id="signupForm" class="nk-form">
+        <label>Full Name
+          <input type="text" name="fullName" maxlength="50" placeholder="Your name" required>
+        </label>
+        <label>Email
+          <input type="email" name="email" placeholder="you@example.com" required>
+        </label>
+        <label>Phone (10 digits)
+          <input type="tel" name="phone" maxlength="10" placeholder="9876543210" required>
+        </label>
+        <div class="row">
+          <label>Password
+            <input type="password" name="password" minlength="6" placeholder="Min 6 characters" required>
+          </label>
+          <label>Confirm Password
+            <input type="password" name="confirm" placeholder="Repeat password" required>
+          </label>
+        </div>
+        <p class="form-error" id="authError"></p>
+        <button type="submit" class="btn-submit full">Create Account</button>
+      </form>
+
+      <p class="auth-switch">Already have an account? <a id="switchLink" href="login.html">Login</a></p>
+    </div>
+  </main>
+
+  <div id="site-footer"></div>
+
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+  <script src="auth.js"></script>
+</body>
+</html>

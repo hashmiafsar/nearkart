@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Cart | NearKart</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="pages.css">
+</head>
+<body data-page="cart">
+
+  <div id="site-header"></div>
+  <div id="site-catbar"></div>
+
+  <main>
+    <h1 class="page-title">🛒 Your Cart</h1>
+
+    <div class="empty card" id="cartEmpty" hidden>
+      <h3>Your cart is empty</h3>
+      <p>Add products from any store to see them here.</p>
+      <a href="index.html" class="add-shop-btn">Browse Stores</a>
+    </div>
+
+    <div class="cart-layout" id="cartLayout" hidden>
+      <section class="card panel">
+        <h2>Items</h2>
+        <div id="cartItems"></div>
+      </section>
+
+      <section class="card panel">
+        <h2>Checkout</h2>
+        <div id="cartSummary"></div>
+
+        <p class="login-note" id="loginNote" hidden>You will be asked to login as a Customer before the order is placed.</p>
+
+        <form id="checkoutForm" class="nk-form" style="margin-top:16px">
+          <label>Full Name
+            <input type="text" name="fullName" maxlength="50" required>
+          </label>
+          <label>Phone (10 digits)
+            <input type="tel" name="phone" maxlength="10" placeholder="9876543210" required>
+          </label>
+          <label>Delivery Address
+            <textarea name="address" maxlength="200" placeholder="House no, street, area, city, pincode" required></textarea>
+          </label>
+          <label>Payment
+            <select name="payment" disabled>
+              <option>Cash on Delivery</option>
+            </select>
+          </label>
+          <p class="form-error" id="checkoutError"></p>
+          <button type="submit" class="btn-submit full">Place Order</button>
+        </form>
+      </section>
+    </div>
+  </main>
+
+  <div id="site-footer"></div>
+
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+  <script src="cart.js"></script>
+</body>
+</html>

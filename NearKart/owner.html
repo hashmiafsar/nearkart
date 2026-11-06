@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Owner Dashboard | NearKart</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="pages.css">
+</head>
+<body data-page="owner">
+
+  <div id="site-header"></div>
+
+  <main>
+    <div class="section-head" style="margin-bottom:0">
+      <div>
+        <h1>🏪 Owner Dashboard</h1>
+        <p id="ownerGreeting"></p>
+      </div>
+      <a href="orders.html" class="add-shop-btn">📋 View Orders</a>
+    </div>
+
+    <section class="card panel">
+      <h2 id="formTitle">➕ Add a New Shop &amp; Design Your Banner</h2>
+
+      <!-- LIVE PREVIEW -->
+      <div class="preview-wrap">
+        <p class="muted">Live preview: customers will see your shop like this</p>
+        <div id="bannerPreview"></div>
+      </div>
+
+      <form id="addShopForm" class="nk-form">
+
+        <h3 class="form-sec">1. Shop details</h3>
+        <label>Shop Name *
+          <input type="text" name="shopName" maxlength="40" placeholder="e.g. Sharma General Store" required>
+        </label>
+        <div class="row">
+          <label>Category *
+            <select name="category" required></select>
+          </label>
+          <label>City *
+            <input type="text" name="city" list="cityList" maxlength="30" placeholder="Start typing your city" required>
+            <datalist id="cityList"></datalist>
+          </label>
+        </div>
+        <label>Shop Address
+          <input type="text" name="address" maxlength="100" placeholder="Shop no, street, area">
+        </label>
+
+        <h3 class="form-sec">2. Shop logo</h3>
+        <label>Upload your logo (square image looks best)
+          <input type="file" name="logo" accept="image/*">
+        </label>
+        <button type="button" class="link-btn blue" id="clearLogo">✕ Remove logo (use initials instead)</button>
+
+        <h3 class="form-sec">3. Banner design</h3>
+        <label>Banner image (products / photo, wide image looks best)
+          <input type="file" name="image" accept="image/*">
+        </label>
+        <button type="button" class="link-btn blue" id="clearBanner">✕ Remove banner image</button>
+
+        <label style="margin-top:14px">Headline (big text on banner)
+          <input type="text" name="bannerTitle" maxlength="40" placeholder="e.g. Fashion for everyone">
+        </label>
+        <div class="row">
+          <label>Small text under headline
+            <input type="text" name="bannerSub" maxlength="40" placeholder="e.g. NEW COLLECTION">
+          </label>
+          <label>Button text
+            <input type="text" name="btnText" maxlength="16" placeholder="Shop Now">
+          </label>
+        </div>
+
+        <p class="muted" style="margin-bottom:8px"><b>Quick styles</b> (click one, then fine-tune colours below)</p>
+        <div class="preset-box" id="presetBox"></div>
+
+        <div class="row3">
+          <label>Banner colour 1
+            <input type="color" name="bg1" value="#ede9fe">
+          </label>
+          <label>Banner colour 2
+            <input type="color" name="bg2" value="#5b21f5">
+          </label>
+          <label>Logo / accent colour
+            <input type="color" name="theme" value="#5b21f5">
+          </label>
+        </div>
+        <div class="row3">
+          <label>Text colour
+            <input type="color" name="textColor" value="#ffffff">
+          </label>
+          <label>Button colour
+            <input type="color" name="btnColor" value="#ffffff">
+          </label>
+          <label>Headline font
+            <select name="font">
+              <option value="sans">Bold Sans</option>
+              <option value="serif">Elegant Serif</option>
+              <option value="script">Italic Script</option>
+            </select>
+          </label>
+        </div>
+
+        <p class="form-error" id="shopError"></p>
+        <div class="modal-actions" style="justify-content:flex-start">
+          <button type="submit" class="btn-submit" id="submitBtn">Add Shop</button>
+          <button type="button" class="btn-cancel" id="cancelEdit" hidden>Cancel editing</button>
+        </div>
+      </form>
+    </section>
+
+    <section>
+      <h2 class="sub-h">My Shops &amp; Products</h2>
+      <div id="myShops"></div>
+    </section>
+  </main>
+
+  <div id="site-footer"></div>
+
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+  <script src="owner.js"></script>
+</body>
+</html>
