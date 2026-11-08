@@ -400,7 +400,7 @@
           '</ul></div>' +
           '<div class="footer-col"><h4>Get Updates</h4>' +
             '<form class="newsletter" id="newsForm"><input type="email" placeholder="Your email" required><button type="submit">Subscribe</button></form>' +
-            '<p class="contact">📞 +91 00000 00000<br>✉️ support@example.com</p>' +
+            '<p class="contact">📞 +91 80092 94569 <br>✉️ afsarhashmi50@gmail.com</p>' +
           '</div>' +
         '</div>' +
         '<div class="footer-bottom"><p>© 2026 NearKart. All rights reserved.</p>' +
